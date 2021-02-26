@@ -1,1 +1,1 @@
-# boss-burger-app
+# burger-boss-app
