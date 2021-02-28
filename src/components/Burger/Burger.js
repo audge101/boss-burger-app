@@ -10,6 +10,7 @@ const burger = (props) => {
 			});
 		})
 		.flat();
+		
 	if (newIngredients.length === 0) {
 		newIngredients = <p>Please start adding ingredients!</p>
 	}
