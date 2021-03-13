@@ -35,7 +35,7 @@ class BurgerConstructor extends Component {
 	}
 
 	componentDidMount () {
-		console.log(this.props);
+		console.log(this.state);
 		axios.get('https://burger-boss-react-default-rtdb.firebaseio.com/ingredients.json')
 		.then(response => {
 			this.setState({ingredients: response.data});
@@ -101,6 +101,7 @@ class BurgerConstructor extends Component {
 	}
 
 	continuePurchaseHandler = () => {
+		console.log(this.state.price);
 		/*
 		this.setState({loading: true});
 		const order = {
@@ -126,7 +127,7 @@ class BurgerConstructor extends Component {
 		for (let i in this.state.ingredients) {
 			queryParams.push(encodeURIComponent(i) + '=' + encodeURIComponent(this.state.ingredients[i]));
 		}
-
+		queryParams.push('price=' + this.state.totalPrice);
 		const queryString = queryParams.join('&');
 
 		this.props.history.push({

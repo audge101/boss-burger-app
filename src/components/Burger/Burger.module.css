@@ -1,5 +1,5 @@
 .Burger {
-	width: 100%;
+	width:100%;
 	margin: auto;
 	height: 250px;
 	text-align: center;
@@ -20,6 +20,7 @@
 	.Burger {
 		width: 350px;
 		height: 300px;
+		position: center
 	}
 }
 
